@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin-left: 5px;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(95, 40, 83);
+  color: #1aa287;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header:hover {
+  cursor: pointer;
+}
+
+nav a {
+  color: orange;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main h2 {
+  color: rgb(37, 11, 1);
+}
+
+main h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid greenyellow;
+  margin: 10px;
+  padding: 15px;
+  width: 200px;
+}
+
+/*nav hover */
+nav a:hover {
+  color: rgb(225, 28, 28);
+  text-decoration: underline;
+  cursor: pointer;
+}

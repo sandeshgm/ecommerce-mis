@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="display.js defer"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <!--          -->
+    <header class="bg-blue-600 text-white p-6 shadow-md">
+      <div class="container mx-auto text-center">
+        <h1
+          class="text-3xl font-bold text-orange-400 hover:text-red-500 cursor-pointer"
+        >
+          Welcome to Sports@Nepal
+        </h1>
+
+        <!-- Navigation part -->
+        <nav class="mt-4 flex justify-between items-center">
+          <img class="h-14 rounded-md" src="./image/logo.png" alt="logo" />
+
+          <div class="gap-8 items-center hidden sm:flex">
+            <a href="index.html" class="text-white text-xl hover:text-red-600"
+              >Home</a
+            >
+            <a href="cart.html" class="text-white text-xl hover:text-red-600">
+              <i class="fa-solid fa-cart-shopping"></i> Cart
+            </a>
+            <a
+              href="#"
+              id="login-link"
+              class="text-white text-xl hover:text-red-600"
+              >Login</a
+            >
+            <!-- search bar-->
+            <div class="relative w-64 md:block">
+              <input
+                type="text"
+                placeholder="Search products..."
+                class="w-full h-10 px-4 pr-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+              />
+              <button
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 text-blue-600"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--Content -->
+    <main class="container mx-auto my-8">
+      <h2 class="text-2xl font-semibold text-center mb-6">Our Products</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 products"
+      >
+        <!-- Products  here   -->
+      </div>
+    </main>
+
+    <!-- Footer Content-->
+    <footer class="bg-gray-900 text-white p-4">
+      <p>
+        <i class="fa-solid fa-envelope mr-1"></i>Email:
+        sports@nepal21.gmai.com.np
+      </p>
+      <p>&copy; 2024 Sports Store</p>
+    </footer>
+
+    <!-- Login form -->
+    <div
+      id="login-form"
+      class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden"
+    >
+      <div class="bg-sky-300 p-6 rounded-lg shadow-lg w-80">
+        <h2
+          class="text-2xl font-semibold text-center mb-4 font-medium hover:font-bold hover:cursor-pointer"
+        >
+          Login
+        </h2>
+        <form action="login.php" method="POST" class="space-y-4">
+          <div>
+            <label
+              class="block mb-1 text-lg text-gray-700 hover:font-semibold hover:cursor-pointer"
+              >Username</label
+            >
+            <input
+              type="text"
+              name="username"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="block mb-1 text-lg text-gray-700 hover:font-semibold hover:cursor-pointer"
+              >Email</label
+            >
+            <input
+              type="text"
+              name="email"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="block mb-1 text-lg text-gray-700 hover:font-semibold hover:cursor-pointer"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-gray-300 text-black py-2 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            id="register-link"
+            class="w-full bg-gray-300 text-black py-2 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- REgister Form-->
+    <div
+      id="register-form"
+      class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden"
+    >
+      <div class="bg-sky-300 p-6 rounded-lg shadow-lg w-80">
+        <h2
+          class="text-2xl font-semibold text-center mb-4 font-medium hover:font-bold hover:cursor-pointer"
+        >
+          Register
+        </h2>
+        <form action="register.php" method="POST" class="space-y-4">
+          <div>
+            <label
+              class="block mb-1 text-lg text-gray-700 hover:font-semibold hover:cursor-pointer"
+              >Username</label
+            >
+            <input
+              type="text"
+              name="username"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              required
+            />
+          </div>
+
+          <div>
+            <label
+              class="block mb-1 text-lg text-gray-700 hover:font-semibold hover:cursor-pointer"
+              >Email</label
+            >
+            <input
+              type="text"
+              name="email"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="block mb-1 text-lg text-gray-700 hover:font-semibold hover:cursor-pointer"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-gray-300 text-black py-2 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+          >
+            Register
+          </button>
+          <button
+            id="login-back"
+            type="button"
+            class="w-full bg-gray-300 text-black py-2 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+          >
+            Back to login
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- toggle login register -->
+    <script>
+      const loginLink = document.querySelector("#login-link");
+      const loginForm = document.querySelector("#login-form");
+      const registerLink = document.querySelector("#register-link");
+      const registerForm = document.querySelector("#register-form");
+      const loginBack = document.querySelector("#login-back");
+
+      loginLink.addEventListener("click", () => {
+        loginForm.classList.toggle("hidden"); // ffirst ma hidden when login clicked login form appear
+        registerForm.classList.add("hidden"); //register form appear on screen we need to hidden it
+      });
+
+      registerLink.addEventListener("click", () => {
+        loginForm.classList.add("hidden"); //when  resister button click login form add but hidden
+        registerForm.classList.remove("hidden"); // register form apper
+      });
+
+      loginBack.addEventListener("click", () => {
+        registerForm.classList.add("hidden"); // register form hiddden
+        loginForm.classList.remove("hidden"); // login form appear
+      });
+
+      loginForm.addEventListener("click", (e) => {
+        if (e.target === loginForm) {
+          loginForm.classList.add("hidden");
+        }
+      });
+
+      registerForm.addEventListener("click", (e) => {
+        if (e.target === registerForm) {
+          registerForm.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
